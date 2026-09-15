@@ -1,0 +1,31 @@
+{
+  "name": "ndf-connect",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w @ndf-connect/web",
+    "dev:mobile": "npm run start -w @ndf-connect/mobile",
+    "build:web": "npm run build -w @ndf-connect/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "verify": "npm run typecheck && npm run lint && npm run test",
+    "supabase:start": "npx supabase start",
+    "supabase:stop": "npx supabase stop",
+    "supabase:reset": "npx supabase db reset",
+    "supabase:test": "npx supabase test db"
+  },
+  "engines": {
+    "node": ">=20.19.4",
+    "npm": ">=10"
+  },
+  "devDependencies": {
+    "supabase": "^2.117.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.0"
+  }
+}
