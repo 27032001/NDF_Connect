@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare static site
         run: |
-          unzip -o github-pages-v2.zip -d site
+          unzip -o github-pages-v3.zip -d site
           touch site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
